@@ -29,5 +29,8 @@
 			</tr>
 		</table>
 	</form>
+	<br>
+	<br>
+	<a href="request.jsp?username=myname">测试url传参</a>
 </body>
 </html>
