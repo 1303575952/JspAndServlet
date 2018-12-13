@@ -7,15 +7,15 @@ public class PathUtil {
 		String os = System.getProperty("os.name");
 		String basePath = "";
 		if(os.toLowerCase().startsWith("win")){
-			basePath = "C:/Users/FELIX/workspace/image/";
+			basePath = "C:/Users/FELIX/workspace/o2oimage/";
 		}else{
-			basePath = "/home/root/image/";
+			basePath = "/home/root/o2oimage/";
 		}
 		basePath = basePath.replace("/", seperator);
 		return basePath;
 	}
 	public static String getShopImagePath(long shopId){
-		String imagePath = "/upload/item/shop/"+shopId+"/";
+		String imagePath = "upload/item/shop/"+shopId+"/";
 		return imagePath.replace("/", seperator);
 	}
 }
