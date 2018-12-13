@@ -34,6 +34,21 @@ public class ImageUtil {
 		return relativeAddr;
 	}
 
+	public static String generateThumbnail(File file, String targetAddr) {
+		String realFileName = getRandomFileName();
+		String extension = file.getName().substring(file.getName().lastIndexOf("."));
+		makeDirPath(targetAddr);
+		String relativeAddr = targetAddr + realFileName + extension;
+		File dest = new File(PathUtil.getImgBasePath() + relativeAddr);
+		try {
+			Thumbnails.of(file).size(200, 200)
+					.watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath + "/watermark.jpg")), 0.2f)
+					.outputQuality(0.8f).toFile(dest);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return relativeAddr;
+	}
 	/*
 	 * 创建目标路径所涉及到的目录
 	 */
