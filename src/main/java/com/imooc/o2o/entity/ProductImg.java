@@ -2,6 +2,10 @@ package com.imooc.o2o.entity;
 
 import java.util.Date;
 
+/**
+ * @Description: 商品图片实体类
+ *
+ */
 public class ProductImg {
 	private Long productImgId;
 	private String imgAddr;
@@ -9,6 +13,10 @@ public class ProductImg {
 	private Integer priority;
 	private Date createTime;
 	private Long productId;
+
+	// 与product联合查询字段
+	private String piImgAddr;
+	private String piImgDesc;
 
 	public Long getProductImgId() {
 		return productImgId;
@@ -57,4 +65,21 @@ public class ProductImg {
 	public void setProductId(Long productId) {
 		this.productId = productId;
 	}
+
+	public String getPiImgAddr() {
+		return piImgAddr;
+	}
+
+	public void setPiImgAddr(String piImgAddr) {
+		this.piImgAddr = piImgAddr;
+	}
+
+	public String getPiImgDesc() {
+		return piImgDesc;
+	}
+
+	public void setPiImgDesc(String piImgDesc) {
+		this.piImgDesc = piImgDesc;
+	}
+
 }

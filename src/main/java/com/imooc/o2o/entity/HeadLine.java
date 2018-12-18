@@ -2,15 +2,18 @@ package com.imooc.o2o.entity;
 
 import java.util.Date;
 
+/**
+ * @Description: 头条实体类
+ *
+ */
 public class HeadLine {
 	private Long lineId;
 	private String lineName;
 	private String lineLink;
 	private String lineImg;
 	private Integer priority;
-	// 0.不可用 1.可用
 	private Integer enableStatus;
-	private Date createtime;
+	private Date createTime;
 	private Date lastEditTime;
 
 	public Long getLineId() {
@@ -61,12 +64,12 @@ public class HeadLine {
 		this.enableStatus = enableStatus;
 	}
 
-	public Date getCreatetime() {
-		return createtime;
+	public Date getCreateTime() {
+		return createTime;
 	}
 
-	public void setCreatetime(Date createtime) {
-		this.createtime = createtime;
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
 	}
 
 	public Date getLastEditTime() {

@@ -1,21 +1,53 @@
 package com.imooc.o2o.util;
 
+/**
+ * @Description: 路径工具类
+ */
 public class PathUtil {
-	private static String seperator = System.getProperty("file.separator");
-	
-	public static String getImgBasePath(){
+
+	// 获取操作系统的分隔符
+	private static String separator = System.getProperty("file.separator");
+
+	/**
+	 * 获取存放图片路径
+	 */
+	public static String getImgBasePath() {
+		// 获取操作系统的信息
 		String os = System.getProperty("os.name");
 		String basePath = "";
-		if(os.toLowerCase().startsWith("win")){
-			basePath = "C:/Users/FELIX/workspace/o2oimage/";
-		}else{
-			basePath = "/home/root/o2oimage/";
+		// 如果是window操作系统
+		if (os.toLowerCase().startsWith("win")) {
+			basePath = "D:/eclipse/tyron/image"; // Windows系统
+		} else {
+			basePath = "/home/tyron/image"; // 除了Windows系统
 		}
-		basePath = basePath.replace("/", seperator);
+
+		// 更换分隔符
+		basePath = basePath.replace("/", separator);
 		return basePath;
 	}
-	public static String getShopImagePath(long shopId){
-		String imagePath = "upload/item/shop/"+shopId+"/";
-		return imagePath.replace("/", seperator);
+
+	/**
+	 * 获取店铺照片路径
+	 */
+	public static String getShopImagePath(long shopId) {
+		String imagePath = "/upload/item/shop" + shopId + "/";
+		return imagePath.replace("/", separator);
+	}
+
+	/**
+	 * 获取首页头图路径
+	 */
+	public static String getHeadLineImagePath() {
+		String imagePath = "/upload/item/headLine/";
+		return imagePath.replace("/", separator);
+	}
+
+	/**
+	 * 获取店铺类别路径
+	 */
+	public static String getShopCategoryImagePath() {
+		String imagePath = "/upload/item/shopcategory/";
+		return imagePath.replace("/", separator);
 	}
 }

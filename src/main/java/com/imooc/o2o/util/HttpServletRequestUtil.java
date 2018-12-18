@@ -2,7 +2,13 @@ package com.imooc.o2o.util;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * @Description: 请求工具类
+ *
+ */
+
 public class HttpServletRequestUtil {
+
 	public static int getInt(HttpServletRequest request, String key) {
 		try {
 			return Integer.decode(request.getParameter(key));
@@ -27,21 +33,21 @@ public class HttpServletRequestUtil {
 		}
 	}
 
-	public static boolean getBoolean(HttpServletRequest request, String key) {
+	public static Boolean getBoolean(HttpServletRequest request, String key) {
 		try {
 			return Boolean.valueOf(request.getParameter(key));
 		} catch (Exception e) {
 			return false;
 		}
 	}
-	
+
 	public static String getString(HttpServletRequest request, String key) {
 		try {
 			String result = request.getParameter(key);
-			if(result!=null){
+			if (result != null) {
 				result = result.trim();
 			}
-			if("".equals(result)){
+			if ("".equals(result)) {
 				result = null;
 			}
 			return result;

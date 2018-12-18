@@ -2,7 +2,12 @@ package com.imooc.o2o.entity;
 
 import java.util.Date;
 
+/**
+ * @Description: 商品类别实体类
+ *
+ */
 public class ShopCategory {
+
 	private Long shopCategoryId;
 	private String shopCategoryName;
 	private String shopCategoryDesc;
@@ -75,4 +80,5 @@ public class ShopCategory {
 	public void setParent(ShopCategory parent) {
 		this.parent = parent;
 	}
+
 }

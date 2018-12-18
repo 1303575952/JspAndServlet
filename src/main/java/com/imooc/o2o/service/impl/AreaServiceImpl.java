@@ -9,14 +9,25 @@ import com.imooc.o2o.dao.AreaDao;
 import com.imooc.o2o.entity.Area;
 import com.imooc.o2o.service.AreaService;
 
+/**
+ * @Description: 区域业务接口实现
+ *
+ */
 @Service
 public class AreaServiceImpl implements AreaService {
+
 	@Autowired
 	private AreaDao areaDao;
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.tyron.o2o.service.AreaService#getAreaList()
+	 */
 	@Override
 	public List<Area> getAreaList() {
-		return areaDao.queryArea();
+		List<Area> areaList = areaDao.selectArea();
+		return areaList;
 	}
 
 }

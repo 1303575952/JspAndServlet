@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.imooc.o2o</groupId>
+	<groupId>com.imooc</groupId>
 	<artifactId>o2o</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
@@ -10,6 +10,7 @@
 	<properties>
 		<spring.version>4.3.7.RELEASE</spring.version>
 	</properties>
+
 
 	<dependencies>
 		<!-- 单元测试 -->
@@ -24,14 +25,14 @@
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
-			<version>1.2.3</version>
+			<version>1.2.1</version>
 		</dependency>
 
 		<!-- 2.数据库 -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.13</version>
+			<version>8.0.12</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -118,7 +119,6 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${spring.version}</version>
-			<scope>test</scope>
 		</dependency>
 
 		<!-- redis客户端:Jedis -->
@@ -144,7 +144,7 @@
 			<artifactId>commons-collections</artifactId>
 			<version>3.2</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/net.coobird/thumbnailator -->
+		<!-- 图片处理 https://mvnrepository.com/artifact/net.coobird/thumbnailator -->
 		<dependency>
 			<groupId>net.coobird</groupId>
 			<artifactId>thumbnailator</artifactId>
@@ -191,7 +191,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>myo2o</finalName>
+		<finalName>o2o</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

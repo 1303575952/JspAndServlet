@@ -2,10 +2,15 @@ package com.imooc.o2o.entity;
 
 import java.util.Date;
 
+/**
+ * @Description: 本地用户信息
+ *
+ */
 public class LocalAuth {
 	private Long localAuthId;
-	private String username;
+	private String userName;
 	private String password;
+	private Long userId;
 	private Date createTime;
 	private Date lastEditTime;
 	private PersonInfo personInfo;
@@ -18,12 +23,12 @@ public class LocalAuth {
 		this.localAuthId = localAuthId;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getPassword() {
@@ -32,6 +37,14 @@ public class LocalAuth {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 
 	public Date getCreateTime() {

@@ -4,10 +4,16 @@ import java.util.List;
 
 import com.imooc.o2o.entity.Area;
 
+/**
+ * @Description: 区域数据接口
+ */
 public interface AreaDao {
-	/*
-	 * 列出区域列表
-	 * @return areaList
+
+	/**
+	 * 查询区域信息
+	 * 
+	 * @return
 	 */
-	List<Area> queryArea();
+	List<Area> selectArea();
+
 }
